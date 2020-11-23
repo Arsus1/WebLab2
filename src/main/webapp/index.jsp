@@ -154,7 +154,7 @@
     const requestSend = function (params) {
         fetch("<%= request.getContextPath() %>" + params, {method: 'GET'})
             .then(response => response.text())
-            .then(data => table.innerHTML = data);
+            .then(data => {if (data !="Error") table.innerHTML = data});
     }
 </script>
 <script src="scripts/validate.js"></script>

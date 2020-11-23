@@ -31,6 +31,17 @@
         <url-pattern>/controller</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>checkFilter</filter-name>
+        <filter-class>ru.ifmo.web.filters.AreaCheckFilter</filter-class>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>checkFilter</filter-name>
+        <url-pattern>/check</url-pattern>
+    </filter-mapping>
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
